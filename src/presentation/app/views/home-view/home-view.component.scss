@@ -1,0 +1,32 @@
+.mat-mdc-slide-toggle.mat-accent {
+  --mdc-switch-selected-focus-state-layer-color: theme('colors.starship.50') !important;
+  --mdc-switch-selected-handle-color: theme('colors.starship.500') !important;
+  --mdc-switch-selected-hover-state-layer-color: theme('colors.starship.200') !important;
+  --mdc-switch-selected-pressed-state-layer-color: theme('colors.starship.300') !important;
+  --mdc-switch-selected-focus-handle-color:  theme('colors.starship.400') !important;
+  --mdc-switch-selected-hover-handle-color:  theme('colors.starship.500') !important;
+  --mdc-switch-selected-pressed-handle-color:  theme('colors.starship.600') !important;
+  --mdc-switch-selected-focus-track-color: theme('colors.starship.700') !important;
+  --mdc-switch-selected-hover-track-color:  theme('colors.starship.800') !important;
+  --mdc-switch-selected-pressed-track-color:  theme('colors.starship.900') !important;
+  --mdc-switch-selected-track-color:  theme('colors.starship.950') !important;
+}
+
+.disable-line-breaks { white-space: nowrap}
+.td-space{
+  margin-bottom: 0px !important;
+}
+
+td {
+  text-align: center;
+  vertical-align: middle;
+}
+tr {
+  text-align: center;
+  vertical-align: middle;
+}
+
+cdk-virtual-scroll-viewport {
+height: 100% !important;
+}
+
