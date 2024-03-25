@@ -2,13 +2,12 @@ export const environment = {
   production: true,
   apiBaseUrl: "https://rickandmortyapi.com/api/",
   firebaseConfig : {
-    apiKey: "AIzaSyDDrPqnKqd1KyMOmAz-25SKV339Hpy8VK8",
-    authDomain: "rudo-app-f86ca.firebaseapp.com",
-    projectId: "rudo-app-f86ca",
-    storageBucket: "rudo-app-f86ca.appspot.com",
-    messagingSenderId: "361651535559",
-    appId: "1:361651535559:web:5e1d50c27f273c1edc88e2",
-    measurementId: "G-YW739KRCE3",
-    clientId: "687667050591-56og5jl7jah8ijg9ukft5ihbumacqash.apps.googleusercontent.com"
+    apiKey: "AIzaSyBtFOUHTP1Tm4QMAvjrWbhaYANEPJkc5Jw",
+    authDomain: "miraitrace.firebaseapp.com",
+    projectId: "miraitrace",
+    storageBucket: "miraitrace.appspot.com",
+    messagingSenderId: "836539658645",
+    appId: "1:836539658645:web:2e8cfc0450966a4c8ec69c",
+    measurementId: "G-KZD62X6L52"
   }
 };

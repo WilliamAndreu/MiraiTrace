@@ -1,0 +1,75 @@
+<td
+        (mouseover)="toggleMenuIconTrue()"
+        (mouseout)="toggleMenuIconFalse()"
+        [ngClass]="{'hidden': mediaQuery.matches}"
+        class="align-top pl-3"
+>
+    <mat-icon
+            [ngClass]="{'visible': showMenuIcon, 'invisible': !showMenuIcon}"
+            class="pt-[0.09rem]"
+            [matMenuTriggerFor]="menu"
+    >more_horiz
+    </mat-icon
+    >
+
+    <mat-menu #menu="matMenu" class="bg-ui2">
+        <button mat-menu-item class="text-white">Show detail</button>
+        <button mat-menu-item class="text-white">Save log</button>
+    </mat-menu>
+</td>
+
+<td (mouseover)="toggleMenuIconTrue()"
+    (mouseout)="toggleMenuIconFalse()"
+    class="align-top border-r-2 border-consoleNumber text-consoleNumber text-center pr-3 pb-1 pt-1">
+    <span class="p-0 m-0">{{ index + 1 }}</span>
+</td>
+
+<td
+        (mouseover)="toggleMenuIconTrue()"
+        (mouseout)="toggleMenuIconFalse()"
+        #dateCell
+        class="pl-8 text-consoleNumber align-top pb-1 pt-1"
+        [ngClass]="{'disable-line-breaks': !mediaQuery.matches}">
+    <span class="pt-1">{{ date | dfnsFormat: 'MM/dd/yyyy hh:mm:' }}</span>
+</td>
+
+<td
+        (mouseover)="toggleMenuIconTrue()"
+        (mouseout)="toggleMenuIconFalse()"
+        class="pl-8 pb-1 pt-1 pr-3 text-left">
+    <div  class="w-full border-b-2-"
+          [ngClass]="{
+      'text-red': priority === 1,
+      'text-yellow': priority === 2,
+      'text-magenta': priority === 3,
+      'text-blue': priority === 4,
+      'p-2': hideLines,
+      'dashed-container': hideLines,
+      'rounded': hideLines
+    }">
+        <p *ngIf="hideLines"
+                class="pt-0"
+                [ngClass]="{
+      'text-red': priority === 1,
+      'text-yellow': priority === 2,
+      'text-magenta': priority === 3,
+      'text-blue': priority === 4,
+      'p-2': hideLines,
+      'dashed-header': hideLines,
+    }">💡 HeaderTEST </p>
+
+    <p
+      class="td-space"
+      [ngClass]="{
+      'text-red': priority === 1,
+      'text-yellow': priority === 2,
+      'text-magenta': priority === 3,
+      'text-blue': priority === 4,
+      'p-2': hideLines,
+
+    }">
+        {{ message }}
+    </p>
+
+    </div>
+</td>
