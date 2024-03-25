@@ -20,7 +20,6 @@ export class GoogleUserViewModel {
 
   private getGoogleUser() {
   this.getGoogleUserUseCase.execute({}).subscribe(value => {
-console.log('broooo 22222')
     this.googleUserBehaviorSubject.next(value);
   })
 

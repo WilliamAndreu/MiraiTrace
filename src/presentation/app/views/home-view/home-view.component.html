@@ -1,1 +1,30 @@
-<p>home-view works!</p>
+<section class="w-full h-full bg-white">
+    <div class="w-full h-full flex flex-col justify-start items-start   text-white">
+        <div class="flex flex-row justify-between items-center bg-ui w-full pt-2 pb-2 pl-6 pr-4 sticky top-0">
+            <mat-chip-listbox multiple="true" aria-label="Fish selection" class="">
+                <mat-chip-option>Info</mat-chip-option>
+                <mat-chip-option>Request</mat-chip-option>
+                <mat-chip-option color="accent" selected>Error</mat-chip-option>
+                <mat-chip-option color="warn">warning</mat-chip-option>
+            </mat-chip-listbox>
+            <div class="flex flex-row justify-end items-center">
+                <mat-slide-toggle [(ngModel)]="hideLines" name="enableWifi">
+                    <span class="text-white">Hide Lines</span>
+                </mat-slide-toggle>
+            </div>
+        </div>
+        <div class="w-full h-full   bg-consoleColorAS">
+            <ag-virtual-scroll  #vs [items]="logs"  [min-row-height]="32" height="calc(100vh - 85px)" class="box-border" (scroll)="scrollButton()">
+                <table class="table-auto border-separate border-spacing-0  mt-3 mb-28">
+                    <tbody>
+                    <tr #itemComponent class="hover:bg-consoleColorFooterAS" *ngFor="let log of vs.items" app-table-row [index]="logs.indexOf(log)" [message]="log.message" [priority]="log.priority " [date]="log.date" [hideLines]="hideLines" [mediaQuery]="mobileQuery"></tr>
+                    </tbody>
+                </table>
+            </ag-virtual-scroll>
+
+        </div>
+    </div>
+    <div class="absolute flex flex-row justify-end items-center bottom-0 w-full h-11 bg-ui">
+        <span class="mr-5 text-white">{{ logs.length }} lines</span>
+    </div>
+</section>

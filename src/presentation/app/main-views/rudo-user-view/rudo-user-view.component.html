@@ -1,23 +1,38 @@
 
     <div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
-        <mat-sidenav-container class="example-sidenav-container"
+        <mat-sidenav-container class="example-sidenav-container bg-ui2"
                                [style.marginTop.px]="mobileQuery.matches ? 0 : 0">
-            <mat-sidenav [opened]="mobileQuery.matches ? 'false' : 'true'" #snav [mode]="mobileQuery.matches ? 'over' : 'side'">
-                <mat-nav-list>
-                    <a mat-list-item routerLink=".">Hola</a>
+            <mat-sidenav [opened]="mobileQuery.matches ? 'false' : 'false'" #snav [mode]="mobileQuery.matches ? 'over' : 'over'" class="bg-ui2">
+                <mat-nav-list class="h-full w-full flex flex-col justify-between items-center">
+                <a  mat-list-item routerLink=".">Icon</a>
+
+                    <div class="w-44 card-shadow rounded-2xl p-2 bg-cover bg-bottom h-80 relative overflow-hidden">
+                        <div class="absolute inset-0" style="background-color: rgb(247, 254, 152);">
+                            <div class="absolute rounded-full z-0 bg-cover bg-center"
+                                 style="width: 26rem; height: 26rem; top: 2rem; right: 6rem; background-position: 25% -83%;  transform: translate(50%, -60%); background-image: url(https://the-decoder.com/wp-content/uploads/2023/05/programmer_terminal_colorful_illustration_Midjourney.png);"></div>
+                            <div class="absolute rounded-full"
+                                 style="width: 22rem; height: 22rem; top: 2rem; right: 6rem; border: 25px solid rgb(247, 254, 152); transform: translate(50%, -64%);"></div>
+                            <div class="absolute rounded-full"
+                                 style="width: 14rem; height: 14rem; top: 2rem; right: 6rem; border: 25px solid rgb(247, 254, 152); transform: translate(50%, -70%);"></div>
+                            <div class="h-full flex">
+                                <div class="leading-none p-6 rounded-3xl mt-auto  text-2xl font-semibold drop-shadow-sm tracking-tight"
+                                     style="color: rgb(39, 48, 3);"> Report<br> <span
+                                        style="color: rgb(148, 170, 6);">your bugs<br></span>
+                                    in seconds.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </mat-nav-list>
             </mat-sidenav>
 
             <mat-sidenav-content>
-
-                <mat-toolbar color="primary" class="example-toolbar">
-                    <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
-                    <h1 class="example-app-name text-rudoBlue">Responsive App</h1>
+                <mat-toolbar color="primary" class="bg-ui2">
+                    <button mat-icon-button (click)="snav.toggle()"><mat-icon class="text-starship-300">menu</mat-icon></button>
+                    <h1 class="example-app-name text-white">MiraiTrace</h1>
                 </mat-toolbar>
-                <section class="page-container p-5">
-                    @for (content of fillerContent; track content) {
-                        <p>{{content}}</p>
-                    }
+                <section class="page-container ">
+                    <router-outlet></router-outlet>
                 </section>
             </mat-sidenav-content>
         </mat-sidenav-container>

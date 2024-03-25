@@ -9,6 +9,9 @@ import {MatButton, MatIconButton} from "@angular/material/button";
 import {MatListItem, MatNavList} from "@angular/material/list";
 import {MatToolbar} from "@angular/material/toolbar";
 import {MatIcon} from "@angular/material/icon";
+import {MatMenuModule} from '@angular/material/menu';
+import {MatButtonModule} from '@angular/material/button';
+
 
 @NgModule({
   declarations: [RudoUserViewComponent],
@@ -26,7 +29,9 @@ import {MatIcon} from "@angular/material/icon";
     MatToolbar,
     MatIconButton,
     MatListItem,
-    MatIcon
+    MatIcon,
+    MatMenuModule,
+    MatButtonModule
   ]
 })
 export class RudoUserViewModule {}
